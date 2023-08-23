@@ -1,0 +1,83 @@
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    box-shadow: 0px 1px 2px 0px rgba(56, 56, 56, 0.08);
+    font-family: $font-family-inter;
+    font-size: 16px;
+    font-weight: 500;
+    color: $dark;
+    cursor: pointer;
+    transition: $default-transition;
+
+    &.text-blue{
+        color: $blue!important;
+    }
+
+    &-icon{
+        margin-right: 12px;
+    }
+
+    &:hover{
+        transform: translateY(2px);
+    }
+
+    &-white{
+        background-color: $white;
+        border: 1px solid $gray-300;
+    }
+
+    &-blue{
+        background-color: $blue;
+        color: $white;
+    }
+
+    &-orange{
+        background-color: $princeton-orange;
+        color: $white;
+    }
+
+    &-green{
+        background-color: $pastel-green;
+        color: $white;
+    }
+
+    @include breakpoint-down(sm){
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+.btn-sm{
+    height: 30px;
+    padding: 0 10px;
+    font-size: 13px;
+
+    &-blue{
+        background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
+        color: $white;
+    }
+
+    &-white{
+        background-color: $white;
+        border: 1px solid $gray-300;
+        color: $blue;
+    }
+}
+
+.btn-link{
+    &-primary{
+        color: $blue;
+    }
+}
+
+.btn-group{
+    &.flex-col{
+        row-gap: 6px;
+    }
+}

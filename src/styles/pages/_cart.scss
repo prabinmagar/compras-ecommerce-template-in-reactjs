@@ -1,0 +1,298 @@
+.cart{
+    &-content{
+        grid-template-columns: auto 280px;
+        gap: 20px;
+
+        @include breakpoint-down(lg){
+            grid-template-columns: auto 240px;
+        }
+
+        @include breakpoint-down(md){
+            grid-template-columns: 100%;
+            row-gap: 0;
+        }
+    }
+
+    &-list{
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @include breakpoint-down(lg){
+            padding: 12px;
+        }
+    }
+
+    &-item{
+        grid-template-columns: 80px auto 160px;
+        gap: 16px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-bottom: 1px solid $gray-300;
+
+        @include breakpoint-down(lg){
+            grid-template-columns: 80px auto 120px;
+        }
+
+        @include breakpoint-down(sm){
+            grid-template-columns: 80px auto;
+        }
+
+        @include breakpoint-down(xs){
+            grid-template-columns: 52px auto;
+            gap: 10px;
+            padding-bottom: 12px;
+        }
+
+        .item-img{
+            width: 80px;
+            height: 80px;
+            padding: 10px;
+
+            img{
+                height: 60px;
+            }
+
+            @include breakpoint-down(xs){
+                width: 52px;
+                height: 52px;
+
+                img{
+                    height: auto;
+                }
+            }
+        }
+
+        .item-info-list{
+            margin: 6px 0 12px 0;
+        }
+
+        .item-summary{
+            row-gap: 12px;
+
+            @include breakpoint-down(sm){
+                grid-column-start: 1;
+                grid-column-end: 3;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .item-price{
+            order: 2;
+        }
+
+        .item-details{
+            position: relative;
+            padding-right: 10px;
+        }
+
+        .item-qty{
+            height: 40px;
+
+            @include breakpoint-down(lg){
+                height: 32px;
+            }
+
+            &-btn{
+                width: 40px;
+                &:first-child{
+                    border-right: 1px solid $gray-300;
+                }
+
+                @include breakpoint-down(lg){
+                    width: 32px;
+                }
+            }
+
+            &-value{
+                width: 70px;
+                border-right: 1px solid $gray-300;
+
+                @include breakpoint-down(lg){
+                    width: 48px;
+                }
+            }
+        }
+
+        &:first-child{
+            padding-top: 0;
+        }
+    }
+
+    &-btns{
+        padding-top: 20px;
+    }
+
+    &-actions{
+        .cart-action-btn{
+            border: 1px solid $gray-300;
+        }
+        .action-remove{
+            color: $red;
+            &:hover{
+                background-color: $red;
+                color: $white;
+                border-color: $red;
+            }
+        }
+        .action-save{
+            color: $blue;
+            &:hover{
+                background-color: $blue;
+                border-color: $blue;
+                color: $white;
+            }
+        }
+
+        .btn-action-view{
+            display: none;
+            padding-left: 2px;
+            padding-right: 2px;
+
+            @include breakpoint-down(sm){
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        &-wrapper{
+            gap: 8px;
+
+            @include breakpoint-down(sm){
+                display: none;
+                position: absolute;
+                top: 26px;
+                right: 0;
+                background-color: $gray-100;
+                border: 1px solid $gray-300;
+                border-radius: 6px;
+                padding: 6px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 2px;
+
+                .cart-action-btn{
+                    border: none;
+                    box-shadow: none;
+                    height: 26px;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                }
+            }
+        }
+    }
+
+    &-summary{
+        margin: 20px 0;
+        box-shadow: 0px 4px 10px rgba(56, 56, 56, 0.10);
+        row-gap: 12px;
+
+        .summary-item{
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+        .border-line{
+            margin-top: 16px;
+            margin-bottom: 16px;
+            height: 1px;
+            background-color: $gray-200;
+        }
+
+        .btn-checkout{
+            height: 48px;
+        }
+
+        .cards-list{
+            gap: 8px;
+            .card-item{
+                width: 48px;
+                height: 32px;
+                img{
+                    width: auto;
+                    max-width: auto;
+                }
+            }
+        }
+    }
+
+    &-services{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+
+        @include breakpoint-down(lg){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-down(sm){
+            grid-template-columns: 100%;
+        }
+
+        &-item{
+            display: grid;
+            grid-template-columns: 48px auto;
+            column-gap: 10px;
+
+            &:nth-child(2){
+                .item-icon{
+                    img{
+                        width: 20px;
+                    }
+                }
+            }
+
+            &:nth-child(3){
+                .item-icon{
+                    img{
+                        width: 22px;
+                    }
+                }
+            }
+        }
+
+        .item-icon{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: $gray-300;
+
+            img{
+                width: 16px;
+            }
+        }
+    }
+}
+
+.sc-saved {
+    padding: 20px 0;
+
+    .product-item {
+      border: none;
+      padding: 0;
+      margin-right: 4px;
+      margin-left: 4px;
+      text-align: center;
+
+      .item-img {
+        margin-right: auto;
+        margin-left: auto;
+        
+        img {
+          max-width: 150px;
+        }
+
+        @include breakpoint-down(sm){
+            margin-right: auto;
+            margin-left: auto;
+        }
+      }
+
+      @include breakpoint-down(sm){
+        text-align: center;
+      }
+    }
+  }

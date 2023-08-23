@@ -1,0 +1,140 @@
+.site-brand {
+  max-width: 150px;
+  margin-right: 32px;
+
+  @include breakpoint-down(lg) {
+    margin-right: 0;
+  }
+
+  .brand-icon {
+    margin-right: 6px;
+    width: 44px;
+
+    @include breakpoint-down(lg) {
+      width: 36px;
+    }
+  }
+
+  .brand-text {
+    font-size: 24px;
+    @include breakpoint-down(lg) {
+      font-size: 20px;
+    }
+  }
+}
+
+.header {
+  z-index: 999;
+  &-content {
+    .hdr-navigation-bar {
+      margin-left: auto;
+      column-gap: 32px;
+
+      @include breakpoint-down(xl) {
+        column-gap: 16px;
+      }
+    }
+
+    .hdr-nav-item {
+      &:nth-child(2) {
+        .hdr-nav-icon {
+          margin-bottom: 5px;
+          @include breakpoint-down(xl) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .hdr-nav-icon {
+      margin-bottom: 6px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      padding: 6px;
+
+      @include breakpoint-down(xl) {
+        margin-bottom: 0;
+      }
+    }
+
+    .sidebar-open-btn--ms {
+      display: none;
+      @include breakpoint-down(xl) {
+        display: block;
+        margin-right: 16px;
+        width: 24px;
+      }
+
+      @include breakpoint-down(sm) {
+        margin-right: 10px;
+      }
+    }
+
+    .hdr-nav-text {
+      @include breakpoint-down(xl) {
+        display: none;
+      }
+    }
+  }
+
+  &-top {
+    column-gap: 24px;
+
+    @include breakpoint-down(lg) {
+      column-gap: 16px;
+    }
+  }
+
+  .hdr-search-bar {
+    .select-wrapper {
+      min-width: 152px;
+
+      select {
+        width: 100%;
+      }
+    }
+    @include breakpoint-down(lg) {
+      border-color: $gray-300;
+      border: 1px solid $gray-300;
+      flex: 1;
+    }
+
+    .search-icon {
+      width: 22px;
+      display: none;
+      @include breakpoint-down(lg) {
+        display: flex;
+        flex-basis: 22px;
+        margin-left: 8px;
+      }
+    }
+    input {
+      @include breakpoint-down(lg) {
+        border: 0;
+      }
+    }
+  }
+
+  .hdr-navigation-bar--ms {
+    margin-left: auto;
+    display: none;
+
+    .hdr-nav-item--ms {
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.header-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: $white;
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.03) 0px 4px 6px -2px;
+}

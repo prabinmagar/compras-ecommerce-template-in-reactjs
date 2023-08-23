@@ -1,0 +1,29 @@
+@import './styles/abstracts/variables';
+@import "./styles/abstracts/mixins";
+@import "./styles/abstracts/utilities";
+@import "./styles/abstracts/config";
+
+@import "./styles/base/reset";
+@import "./styles/base/typography";
+
+@import "./styles/components/breadcrumb";
+@import "./styles/components/button";
+@import "./styles/components/filter_tags";
+@import "./styles/components/filters";
+@import "./styles/components/form";
+@import "./styles/components/newsletter";
+@import "./styles/components/pagination";
+@import "./styles/components/product_item";
+@import "./styles/components/rating";
+@import "./styles/components/sidebar";
+@import "./styles/components/slider";
+@import "./styles/components/tabs";
+
+@import "./styles/layout/header";
+@import "./styles/layout/navbar";
+@import "./styles/layout/footer";
+
+@import "./styles/pages/index";
+@import "./styles/pages/products";
+@import "./styles/pages/details";
+@import "./styles/pages/cart";

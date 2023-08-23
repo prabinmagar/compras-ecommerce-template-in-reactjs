@@ -1,0 +1,26 @@
+.breadcrumb{
+    &-item{
+        color: $gray-500;
+        a{
+            &:hover{
+                color: $dark;
+            }
+
+            @include breakpoint-down(xs){
+                font-size: 12px!important;
+            }
+        }
+    }
+    &-separator{
+        width: 18px;
+        padding: 3px;
+        opacity: 0.6;
+        margin-right: 6px;
+
+        @include breakpoint-down(xs){
+            margin-right: 0;
+            width: 13px;
+            margin-top: 4px;
+        }
+    }
+}

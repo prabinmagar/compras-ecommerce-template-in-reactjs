@@ -1,0 +1,309 @@
+.container {
+  max-width: 1280px;
+  padding: 0 16px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include breakpoint-down(xs){
+    padding-right: 12px!important;
+    padding-left: 12px!important;
+  }
+}
+
+/* flexbox and grid */
+.flex {
+  display: flex;
+  &-col {
+    flex-direction: column;
+  }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+  &-1 {
+    flex: 1;
+  }
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.items {
+  &-center {
+    align-items: center;
+  }
+  &-start {
+    align-items: flex-start;
+  }
+  &-end {
+    align-items: flex-end;
+  }
+  &-stretch {
+    align-items: stretch;
+  }
+}
+.justify {
+  &-center {
+    justify-content: center;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+  &-start {
+    justify-content: flex-start;
+  }
+  &-end {
+    justify-content: flex-end;
+  }
+}
+.grid {
+  display: grid;
+}
+.block {
+  display: block;
+}
+
+/* height and width */
+.h-full {
+  height: 100%;
+}
+.w-full {
+  width: 100%;
+}
+
+/* text align and transformation */
+.text {
+  &-center {
+    text-align: center;
+  }
+  &-start {
+    text-align: left;
+  }
+  &-end {
+    text-align: right;
+  }
+  &-justify {
+    text-align: justify;
+  }
+  &-white {
+    color: $white;
+  }
+  &-dark {
+    color: $dark;
+  }
+  &-blue {
+    color: $blue;
+  }
+  &-gray-200 {
+    color: $gray-200;
+  }
+  &-gray-400 {
+    color: $gray-400;
+  }
+  &-gray-500 {
+    color: $gray-500;
+  }
+  &-gray-600 {
+    color: $gray-600;
+  }
+  &-gray-800 {
+    color: $gray-800;
+  }
+  &-red {
+    color: $red;
+  }
+  &-green {
+    color: $pastel-green;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+.bg {
+  &-white {
+    background-color: $white;
+  }
+  &-dark {
+    background-color: $dark;
+  }
+  &-blue {
+    background-color: $blue;
+  }
+  &-orange {
+    background-color: $orange;
+  }
+  &-verdigris {
+    background-color: $verdigris;
+  }
+}
+
+// gradients
+.gradient-azure {
+  background: linear-gradient(128deg, #2c7cf1 0%, rgba(0, 209, 255, 0.5) 100%);
+}
+
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.no-wrap {
+  white-space: nowrap;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: $font-family-inter;
+  letter-spacing: -0.2px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  font-family: $font-family-opensans;
+  margin-bottom: 24px;
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+// border
+.border-radius-6 {
+  border-radius: 6px;
+}
+.border-gray-200 {
+  border: 1px solid $gray-200;
+}
+.border-gray-300 {
+  border: 1px solid $gray-300;
+}
+
+// badges
+.badge-off {
+  background-color: $misty-rose;
+  color: $red;
+  text-align: center;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100vh;
+  min-width: 60px;
+}
+
+// font weights
+.font-normal {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+// overflow
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// display
+.hide {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+.show-flex {
+  display: flex !important;
+}
+
+// hide on mobile screen
+.hide-on--ms {
+  @include breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+// show on mobile screen
+.show-on--ms {
+  @include breakpoint-down(lg) {
+    display: flex !important;
+  }
+}
+
+// padding
+.theme-p {
+  padding: 20px 16px;
+
+  @include breakpoint-down(lg) {
+    padding: 16px 12px;
+  }
+
+  @include breakpoint-down(sm) {
+    padding: 12px;
+  }
+}
+
+.theme-py{
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include breakpoint-down(lg){
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @include breakpoint-down(sm){
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+// scrollbar
+.scrollbar-x {
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $gray-400;
+  }
+}
+
+.scrollbar-y {
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $gray-400;
+  }
+}

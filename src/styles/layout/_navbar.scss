@@ -1,0 +1,102 @@
+.navigation {
+  padding: 17px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+
+  &-content {
+    @include breakpoint-down(xl) {
+      .navigation-left {
+        overflow-x: scroll;
+        width: calc(100% - 290px);
+
+        &::-webkit-scrollbar {
+          height: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          background-color: $gray-400;
+        }
+
+        .navigation-menu {
+          width: 1200px;
+        }
+      }
+      .navigation-right {
+        width: 260px;
+        justify-content: flex-end;
+        column-gap: 16px !important;
+      }
+    }
+  }
+
+  &-menu {
+    .menu-item {
+      margin-right: 24px;
+    }
+    .menu-link {
+      &:hover {
+        color: $blue;
+      }
+    }
+    .menu-dropdown-icon {
+      margin-left: 2px;
+    }
+  }
+  .sidenav-show-btn {
+    margin-right: 10px;
+    margin-bottom: 2px;
+
+    @include breakpoint-down(xl) {
+      display: none;
+    }
+  }
+
+  .navigation-right {
+    column-gap: 32px;
+    @include breakpoint-down(lg){
+      width: 100%;
+    }
+  }
+
+  .shipping-options {
+    .option-img {
+      width: 22px;
+      height: 16px;
+      margin-right: 8px;
+      margin-left: 6px;
+    }
+  }
+}
+
+.currency-options, .shipping-options{
+  position: relative;
+  cursor: pointer;
+
+  &-list {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    width: auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 6px 10px;
+    z-index: 10;
+    min-height: 200px;
+    max-height: 400px;
+
+    .currency-option, .shipping-option{
+      cursor: pointer;
+      transition: $default-transition;
+      padding: 2px 0;
+
+      &:hover{
+        opacity: 0.9;
+      }
+    }
+  }
+}

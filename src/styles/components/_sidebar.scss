@@ -1,0 +1,90 @@
+.sidenav{
+    width: 280px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: all 600ms cubic-bezier(.27,1.57,1,-0.61);
+
+    &.show{
+        transform: translateX(0);
+    }
+
+    @include breakpoint-down(xs){
+        width: 100%;
+    }
+
+    &-top{
+        background-color: $gray-200;
+        padding: 20px;
+        row-gap: 10px;
+        grid-template-columns: 44px auto;
+        align-items: center;
+        column-gap: 16px;
+    }
+
+    .avatar{
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .links-group{
+        a{
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+    }
+
+    &-main{
+        padding: 20px;
+    }
+
+    .sidenav-item{
+        column-gap: 12px;
+        align-items: center;
+        grid-template-columns: 24px auto;
+        margin: 12px;
+
+        @include breakpoint-down(sm){
+            margin: 8px;
+        }
+
+        &-icon{
+            width: 24px;
+            color: $gray-800;
+            transition: $default-transition;
+        }
+
+        &:hover{
+            .sidenav-item-icon{
+                color: $dark;
+            }
+        }
+
+        &-separator{
+            height: 1px;
+            background-color: $gray-300;
+            width: 100%;
+            margin: 16px 0;
+        }
+    }
+
+    &-hide-btn{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-size: 20px;
+        color: $gray-500;
+        transition: $default-transition;
+
+        &:hover{
+            color: $dark;
+        }
+    }
+}

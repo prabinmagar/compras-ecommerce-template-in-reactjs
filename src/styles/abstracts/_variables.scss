@@ -1,0 +1,41 @@
+$white: #fff;
+$dark: #1C1C1C;
+$blue: #0D6EFD;
+$gray-100: #F7F7F7;
+$gray-200: #E0E0E0;
+$gray-300: #DEE2E7;
+$gray-400: #BDC4CD;
+$gray-500: #8B96A5;
+$gray-600: #505050;
+$gray-800: #808080;
+$alice-blue: #E5F1FF;
+$alice-blue-v1: #E3F0FF;
+$orange: #F38332;
+$princeton-orange: #FF9017;
+$verdigris: #55BDC3;
+$red: #EB001B;
+$misty-rose: #FFE3E3;
+$peach: #FFE8BA;
+$pastel-green: #00B517;
+
+$default-transition: all 300ms ease-in-out;
+$font-family-inter: 'Inter', sans-serif;
+$font-family-opensans: 'Open Sans', sans-serif;
+
+$breakpoints-up: (
+  "xs": "480px",
+  "sm": "576px",
+  "md": "768px",
+  "lg": "992px",
+  "xl": "1200px",
+  "xxl": "1400px",
+);
+
+$breakpoints-down: (
+  "xs": "479.98px",
+  "sm": "575.98px",
+  "md": "767.98px",
+  "lg": "991.98px",
+  "xl": "1199.98px",
+  "xxl": "1399.98px",
+);

@@ -1,0 +1,70 @@
+.details-tabs {
+    padding: 20px 4px 20px 4px;
+    .tabs-btns{
+        border-bottom: 1px solid $gray-300;
+
+        @include breakpoint-down(sm){
+          flex-direction: column;
+          align-items: stretch;
+        }
+    }
+  .tabs-btn {
+    padding: 10px 20px;
+
+    &:hover{
+        background-color: $gray-100;
+    }
+
+    &.active {
+      border-bottom: 2px solid $blue;
+      color: $blue;
+    }
+
+    @include breakpoint-down(sm){
+      padding: 10px 12px;
+    }
+  }
+
+  .tabs-content{
+    padding: 16px;
+    color: $gray-600;
+    display: none;
+
+    p{
+      margin-bottom: 10px;
+    }
+
+    ul{
+      li{
+        margin: 3px 0 3px 26px;
+        position: relative;
+
+        &::after{
+          content: "";
+          position: absolute;
+          left: -24px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-family: "Font Awesome 5 Free";
+          content: "\f00c";
+          font-weight: 900;
+          color: $gray-600;
+        }
+      }
+    }
+
+    @include breakpoint-down(lg){
+      font-size: 14px;
+    }
+
+    @include breakpoint-down(sm){
+      padding: 12px;
+      font-size: 14px; 
+    }
+  }
+
+  @include breakpoint-down(sm){
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}

@@ -1,0 +1,84 @@
+// Typography
+p {
+  font-family: "Inter", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-opensans;
+  font-weight: 600;
+  margin-bottom: 0;
+  letter-spacing: -0.2px;
+}
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+  margin-top: 12px;
+}
+
+.text-xs{
+  font-size: 12px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.text-base {
+  font-size: 16px;
+}
+.text-lg {
+  font-size: 20px;
+}
+.text-xl{
+  font-size: 24px;
+}
+
+@include breakpoint-down(lg){
+  .text-sm{
+    font-size: 13px!important;
+  }
+  .text-base{
+    font-size: 15px!important;
+  }
+  .text-lg{
+    font-size: 18px!important;
+  }
+  .text-xl{
+    font-size: 20px!important;
+  }
+}
+
+@include breakpoint-down(sm){
+  .text-sm{
+    font-size: 12px!important;
+  }
+  .text-base{
+    font-size: 14px!important;
+  }
+  .text-lg{
+    font-size: 16px!important;
+  }
+  .text-xl{
+    font-size: 18px!important;
+  }
+}
+
+@include breakpoint-down(xs){
+  .text-sm{
+    font-size: 11px!important;
+  }
+  .text-base{
+    font-size: 13px!important;
+  }
+  .text-lg{
+    font-size: 15px!important;
+  }
+  .text-xl{
+    font-size: 17px!important;
+  }
+}

@@ -1,0 +1,91 @@
+.footer {
+  .site-brand {
+    margin-right: auto;
+
+    @include breakpoint-down(sm){
+      margin-left: auto;
+      justify-content: center;
+    }
+  }
+
+  &-content {
+    grid-template-columns: 276px repeat(4, 2fr) 1fr;
+    column-gap: 32px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @include breakpoint-down(md) {
+      grid-template-columns: 2fr repeat(2, 1fr);
+      row-gap: 40px;
+    }
+
+    @include breakpoint-down(sm) {
+      grid-template-columns: repeat(1, 1fr);
+      text-align: center;
+      row-gap: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    @include breakpoint-down(xs){
+      row-gap: 12px;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+
+    .brand-intro {
+      padding: 15px 0;
+      max-width: 300px;
+
+      @include breakpoint-down(sm){
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .social-links {
+    column-gap: 8px;
+
+    @include breakpoint-down(sm) {
+      justify-content: center;
+    }
+  }
+
+  .footer-links {
+    a {
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+
+  .footer-item-title {
+    font-size: 17px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .store-links {
+    row-gap: 8px;
+    a {
+      width: 124px;
+    }
+
+    @include breakpoint-down(sm) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-bottom {
+    border-top: 1px solid $gray-300;
+    background-color: #eff2f4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include breakpoint-down(sm) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,234 @@
+.products-page {
+  .top-main {
+    &-content {
+      grid-template-columns: 230px auto;
+      column-gap: 28px;
+
+      @include breakpoint-down(xl) {
+        grid-template-columns: 100%;
+        row-gap: 24px;
+      }
+    }
+  }
+
+  .products-block-head {
+    padding: 8px 18px;
+    margin-bottom: 20px;
+
+    @include breakpoint-down(md) {
+      flex-direction: column;
+      row-gap: 10px;
+      align-items: flex-start;
+    }
+
+    @include breakpoint-down(xs) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .products-view-options {
+    column-gap: 10px;
+
+    @include breakpoint-down(xs) {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      row-gap: 6px;
+    }
+
+    .view-options-check {
+      padding-right: 6px;
+      padding-left: 6px;
+
+      input {
+        scale: 1.2;
+        margin-right: 6px;
+      }
+
+      @include breakpoint-down(xs) {
+        padding-left: 0;
+      }
+    }
+
+    .view-options-select {
+      max-width: 172px;
+
+      @include breakpoint-down(xs) {
+        max-width: 100%;
+      }
+    }
+
+    select {
+      padding: 6px 8px;
+      width: 160px;
+
+      @include breakpoint-down(xs) {
+        width: 100%;
+      }
+    }
+
+    .view-options-btns {
+      button {
+        width: 38px;
+        height: 40px;
+
+        img {
+          width: 24px;
+        }
+
+        &:first-child {
+          border-right: 1px solid $gray-300;
+        }
+
+        &.active {
+          background-color: $gray-100;
+        }
+      }
+
+      @include breakpoint-down(xs) {
+        button {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .products-list-item {
+    grid-template-columns: 210px auto;
+
+    @include breakpoint-down(lg) {
+      grid-template-columns: 160px auto;
+    }
+
+    @include breakpoint-down(sm) {
+      grid-template-columns: 100%;
+    }
+
+    .item-img {
+      padding: 20px;
+
+      @include breakpoint-down(lg) {
+        padding: 12px;
+      }
+
+      @include breakpoint-down(sm) {
+        justify-content: flex-start;
+      }
+    }
+
+    .item-details {
+      padding: 20px 20px 20px 12px;
+      grid-template-columns: auto 80px;
+      column-gap: 16px;
+
+      @include breakpoint-down(md) {
+        grid-template-columns: auto auto;
+        column-gap: 10px;
+        padding-right: 12px;
+      }
+    }
+
+    .item-title {
+      margin-bottom: 14px;
+
+      @include breakpoint-down(md) {
+        margin-bottom: 8px;
+      }
+    }
+
+    .item-price {
+      .price-old {
+        text-decoration: line-through;
+        margin-left: 8px;
+      }
+    }
+
+    .info-separator {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: $gray-300;
+      margin-right: 9px;
+      margin-left: 9px;
+    }
+
+    .info-shipping {
+      color: $pastel-green;
+    }
+
+    .item-description {
+      margin: 12px 0 8px 0;
+      line-height: 1.5;
+    }
+
+    .item-wish {
+      width: 40px;
+      height: 40px;
+      border: 1px solid $gray-300;
+      box-shadow: 0px 1px 2px 0px rgba(56, 56, 56, 0.08);
+      margin-left: auto;
+      color: $blue;
+
+      @include breakpoint-down(md) {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+  .products-block-list {
+    row-gap: 10px;
+
+    &.products-gridview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      @include breakpoint-down(lg){
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include breakpoint-down(sm){
+        grid-template-columns: 100%;
+      }
+
+      .products-list-item {
+        grid-template-columns: 100%;
+        padding: 20px;
+        row-gap: 18px;
+
+        .item-img {
+          max-width: auto;
+          width: auto;
+          height: 200px;
+          padding: 15px;
+          margin-right: auto;
+          margin-left: auto;
+          img{
+            width: auto;
+            height: 100%;
+          }
+        }
+
+        .item-details {
+          padding: 0;
+          grid-template-columns: auto auto;
+        }
+
+        .info-orders,
+        .info-shipping,
+        .item-description,
+        .info-separator {
+          display: none;
+        }
+
+        .btn-link{
+            display: inline-block;
+            margin-top: 10px;
+        }
+      }
+    }
+  }
+}

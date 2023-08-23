@@ -1,0 +1,175 @@
+.filters-blocks {
+  .filt-block {
+    padding: 6px 0;
+    border-top: 1px solid $gray-200;
+
+    &.filt-pricerange{
+      .filt-body{
+        padding-bottom: 12px;
+      }
+    }
+
+    @include breakpoint-down(xl){
+        border-top: none;
+    }
+
+    @include breakpoint-down(xs){
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+
+  .filt-head {
+    padding: 4px 0;
+    cursor: pointer;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
+    &-text {
+      font-weight: 600;
+    }
+  }
+
+  .filt-body{
+    @include breakpoint-down(xs){
+      display: none;
+    }
+  }
+
+  .filt-list {
+    padding: 6px 0;
+  }
+
+  .filt-item {
+    color: $gray-600;
+    padding: 4px 0;
+  }
+
+  .filt-item-check {
+    margin-right: 8px;
+  }
+
+  .filt-rating {
+    color: $princeton-orange;
+  }
+
+  .filt-range {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .filt-pricerange{
+    .btn{
+        border: 1px solid $gray-200;
+        width: 100%;
+        margin-top: 8px;
+
+        @include breakpoint-down(xl){
+          font-size: 14px;
+        }
+    }
+  }
+
+  @include breakpoint-down(xl){
+    display: flex;
+    column-gap: 40px;
+    border-top: 1px solid $gray-300;
+
+    .pricerange{
+        width: 200px;
+    }
+
+    .filt-item{
+        line-height: 1.3;
+    }
+  }
+
+  @include breakpoint-down(xl){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 2fr repeat(2, 1fr);
+    column-gap: 24px;
+  }
+
+  @include breakpoint-down(lg){
+    grid-template-columns: repeat(3, 1fr) 2fr;
+  }
+
+  @include breakpoint-down(md){
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpoint-down(xs){
+    grid-template-columns: 100%;
+  }
+}
+
+.price-input {
+  width: 100%;
+  gap: 9px;
+  margin-top: 16px;
+}
+.field input {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid $gray-200;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.slider {
+  height: 5px;
+  position: relative;
+  background: $gray-300;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+.slider .progress {
+  height: 100%;
+  left: 25%;
+  right: 50%;
+  position: absolute;
+  border-radius: 5px;
+  background: $blue;
+}
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: $blue;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: $blue;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}

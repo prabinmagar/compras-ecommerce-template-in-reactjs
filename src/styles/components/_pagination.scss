@@ -1,0 +1,49 @@
+.pagination {
+  column-gap: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include breakpoint-down(lg){
+    justify-content: center;
+  }
+
+  @include breakpoint-down(sm){
+    flex-direction: column;
+    row-gap: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &-select {
+    min-width: 125px;
+    select {
+      min-width: 100%;
+      padding: 2px 8px;
+      height: 40px;
+    }
+  }
+
+  &-items{
+    border: 1px solid $gray-300;
+    border-radius: 6px;
+  }
+
+  &-item{
+    width: 44px;
+    height: 40px;
+    border-right: 1px solid $gray-300;
+
+    &:last-child{
+        border-right: 0;
+    }
+
+    &.active{
+        background-color: $alice-blue;
+        color: $gray-500;
+    }
+
+    &.disabled{
+        color: $gray-500;
+    }
+  }
+}

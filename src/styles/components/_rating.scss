@@ -1,0 +1,20 @@
+.rating {
+  column-gap: 1px;
+  li {
+    color: $princeton-orange;
+  }
+
+  &-value {
+    margin-left: 5px;
+  }
+}
+
+.separator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: $gray-300;
+  margin-right: 9px;
+  margin-left: 9px;
+}

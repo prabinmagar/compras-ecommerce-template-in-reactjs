@@ -1,0 +1,20 @@
+.filter-tags-list{
+    margin: 12px 0;
+    gap: 6px;
+    
+    .tag-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $gray-300;
+        border-radius: 5px;
+        height: 28px;
+        padding-left: 6px;
+        padding-right: 6px;
+        column-gap: 6px;
+
+        button{
+            color: $blue;
+        }
+    }
+}

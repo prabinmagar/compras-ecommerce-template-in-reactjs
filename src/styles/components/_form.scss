@@ -1,0 +1,159 @@
+input[type="text"]{
+    &::placeholder{
+        font-size: 16px;
+        font-weight: 400;
+
+        @include breakpoint-down(lg){
+            font-size: 15px;
+        }
+
+        @include breakpoint-down(sm){
+            font-size: 14px;
+        }
+    }
+}
+
+.hdr-search-bar{
+    border: 2px solid $blue;
+    width: auto;
+    max-width: 665px;
+
+    input[type="text"]{
+        height: 40px;
+        padding: 10px;
+        width: 420px;
+        border-right: 1px solid $blue;
+
+        &::placeholder{
+            color: $gray-500;
+        }
+    }
+
+    select{
+        color: $dark;
+        width: 145px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    button{
+        background-color: $blue;
+        max-width: 100px;
+    }
+}
+
+.inquiry-form{
+    .form-elem{
+        margin-bottom: 20px;
+        &-control{
+            height: 40px;
+            border-radius: 6px;
+            border: 1px solid $gray-300;
+            padding: 10px;
+            width: 100%;
+
+            &::placeholder{
+                color: $dark;
+            }
+
+            &:focus{
+                border-color: $gray-400;
+            }
+        }
+
+        textarea{
+            height: 72px;
+            &::placeholder{
+                color: $gray-500;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .form-elems{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 8px;
+    }
+}
+
+.select-wrapper{
+    position: relative;
+    overflow: hidden;
+    select{
+        -webkit-appearance: none;
+        appearance: none;
+    }  
+
+    &::after{
+        content: "";
+        background: url('./assets/icons/chevron_down.svg') center/cover no-repeat;
+        width: 24px;
+        height: 24px;
+        font-size: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 8px;
+        position: absolute;
+        pointer-events: none;
+    }
+}
+
+.form-elem-group{
+    height: 40px;
+    padding: 0 8px;
+    grid-template-columns: 24px auto;
+    column-gap: 6px;
+    border: 1px solid $gray-300;
+    max-width: 275px;
+    background-color: $white;
+    border-radius: 6px;
+
+    .form-elem-icon{
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-elem-control{
+        &::placeholder{
+            color: $gray-500;
+        }
+    }
+}
+
+.newsletter-form{
+    column-gap: 8px;
+    margin-top: 20px;
+}
+
+.coupon{
+    &-title{
+        margin-bottom: 8px;
+    }
+    .input-group{
+        height: 40px;
+        border: 1px solid $gray-200;
+        border-radius: 6px;
+        overflow: hidden;
+
+        input{
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 100%;
+        }
+
+        .btn{
+            border: none;
+            border-left: 1px solid $gray-200;
+            border-radius: 0;
+
+            &:hover{
+                transform: none;
+                background-color: $blue;
+                color: $white!important;
+            }
+        }
+    }
+}
